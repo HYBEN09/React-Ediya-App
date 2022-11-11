@@ -1,26 +1,61 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import "./AppHomeLink.scss";
+import classNames from "classnames";
 import { string } from "prop-types";
 
-const AppHomeLink = ({ external, children, ...domProps }) => {
+const AppHomeLink = ({
+  wrapperProps: {
+    as: WrapperComponent,
+    className: wrapperClassName,
+    ...restWrapperProps
+  },
+  external,
+  children,
+  className,
+  ...domProps
+}) => {
+  // ----------------------------------------------------------------------------------------
+  //? <AppHomeLink/> className과 <AppHeader/> className 병합
+  // const combineClassNames = ["appHeader__homeLink", className || ""]
+  //   .join(" ")
+  //   .trim();
+
+  // ----------------------------------------------------------------------------------------
+  //? classNames 라이브러리 사용
+  const combineClassNames = classNames("appHeader__link", className);
+  const combineWrapperClassNames = classNames(
+    "appHeader__brand",
+    wrapperClassName || ""
+  );
+
   return (
-    <h1 className="appHeader__brand">
+    // WrapperComponent 사용 -> h1 => <AppHeader/> wrapperProps 속성의 as에 설정한 요소로 바꿈
+    <WrapperComponent
+      {...restWrapperProps}
+      className={combineWrapperClassNames}
+    >
       <a
-        className="appHeader__homeLink"
         {...domProps}
+        className={combineClassNames}
         target={external ? "_blank" : null}
         rel={external ? "noopener noreferrer" : null}
       >
         {/* AppHeader에  span요소가 없을때 기본값을 적용 */}
         {children || <span className="a11yHidden">홈 링크</span>}
       </a>
-    </h1>
+    </WrapperComponent>
   );
 };
 
 AppHomeLink.protoTypes = {
   href: string.isRequired,
+};
+
+// <AppHeader/> wrapperProps속성의 기본값
+AppHomeLink.defaultProps = {
+  wrapperProps: {
+    as: "h1",
+  },
 };
 
 export default AppHomeLink;

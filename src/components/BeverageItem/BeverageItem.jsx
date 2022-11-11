@@ -2,7 +2,8 @@
 import React from "react";
 import "./BeverageItem.scss";
 
-const BeverageItem = () => {
+const BeverageItem = ({ item }) => {
+  console.log(item);
   return (
     <li className="beverageList__item">
       <a

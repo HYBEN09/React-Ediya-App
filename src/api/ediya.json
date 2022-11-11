@@ -34,7 +34,7 @@
   },
   "beverage_menu": [
     {
-      "id": "beverage-mer1g",
+      "id": "1",
       "figure": {
         "name": "ICED-벚꽃라떼",
         "src": "https://yamoo9.github.io/assets/images/ediya/iced-cherry-blossoms-latte.png",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "id": "beverage-va2ge",
+      "id": "2",
       "figure": {
         "name": "HOT-벚꽃라떼",
         "src": "https://yamoo9.github.io/assets/images/ediya/hot-cherry-blossoms-latte.png",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "id": "beverage-vrr3u",
+      "id": "3",
       "figure": {
         "name": "ICED-브라우니-쇼콜라",
         "src": "https://yamoo9.github.io/assets/images/ediya/iced-brownie-chocolate.png",
@@ -154,7 +154,7 @@
       }
     },
     {
-      "id": "beverage-k4jeg",
+      "id": "4",
       "figure": {
         "name": "HOT-브라우니-쇼콜라",
         "src": "https://yamoo9.github.io/assets/images/ediya/hot-brownie-chocolate.png",
@@ -194,7 +194,7 @@
       }
     },
     {
-      "id": "beverage-mejek5",
+      "id": "5",
       "figure": {
         "name": "제주청귤-오리지널",
         "src": "https://yamoo9.github.io/assets/images/ediya/jeju-green-tangerine-tea.png",
@@ -234,7 +234,7 @@
       }
     },
     {
-      "id": "beverage-kw6jz",
+      "id": "6",
       "figure": {
         "name": "제주청귤-블라썸",
         "src": "https://yamoo9.github.io/assets/images/ediya/jeju-green-tangerine-blossom.png",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "id": "beverage-7ziej",
+      "id": "7",
       "figure": {
         "name": "석류-오리지널",
         "src": "https://yamoo9.github.io/assets/images/ediya/pomegranate-tea.png",
@@ -314,7 +314,7 @@
       }
     },
     {
-      "id": "beverage-wyekj",
+      "id": "8",
       "figure": {
         "name": "석류-애플라임",
         "src": "https://yamoo9.github.io/assets/images/ediya/pomegranate-apple-lime.png",

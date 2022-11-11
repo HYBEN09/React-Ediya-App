@@ -1,5 +1,5 @@
 import AppButton from "components/AppButton/AppButton";
-import EdiyaContext from "context/ediyaContext";
+import EdiyaContext from "../../context/ediyaContext.js";
 import { Fragment, Component, createRef } from "react";
 import "./AppNavigation.scss";
 

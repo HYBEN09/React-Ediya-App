@@ -21,7 +21,7 @@ const AppButton = ({ children, className, label, ...restProps }, ref) => {
   );
 };
 
-//? forwardRef 이름 변경
+//? forwardRef 명시적으로 이름 설정
 AppButton.displayName = "CommonButton";
 
 export default forwardRef(AppButton);

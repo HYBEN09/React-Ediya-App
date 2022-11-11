@@ -1,25 +1,18 @@
-import './App.scss'
-import logo from 'assets/logo.svg'
+import "./App.scss";
+
+import AppHeader from "../components/AppHeader/AppHeader.jsx";
+import AppMain from "../components/AppMain/AppMain";
+import GoToTop from "../components/GoToTop/GoToTop";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>src/App.js</code> 문서를 수정하면 실시간 업데이트 됩니다
-        </p>
-        <a
-          className="App-link"
-          href="https://ko.reactjs.org"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          React를 배워보세요
-        </a>
-      </header>
-    </div>
-  )
+    <Fragment>
+      <AppHeader />
+      <AppMain />
+      <GoToTop />
+    </Fragment>
+  );
 }
 
-export default App
+export default App;

@@ -1,7 +1,11 @@
+import AppButton from "components/AppButton/AppButton";
+import EdiyaContext from "context/ediyaContext";
 import { Fragment, Component } from "react";
 import "./AppNavigation.scss";
 
 class AppNavigation extends Component {
+  static contextType = EdiyaContext;
+
   state = {
     isOpen: false,
     classes: "appNavigation",
@@ -38,51 +42,37 @@ class AppNavigation extends Component {
   };
 
   render() {
+    const {
+      navigation: { title, items },
+    } = this.context;
     return (
       <Fragment>
-        <button
-          className="resetButton is-open-menu"
-          type="button"
-          title="메뉴 열기"
-          aria-label="메뉴 열기"
+        <AppButton
+          className="is-open-menu"
+          label="메뉴 열기"
           onClick={this.handleOpenMenu}
         >
           <span className="ir"></span>
-        </button>
+        </AppButton>
 
         <nav className={this.state.classes} hidden={!this.state.isOpen}>
-          <h2 className="a11y-hidden">메인 메뉴</h2>
+          <h2 className="a11y-hidden">{title}</h2>
           <ul className="resetList">
-            <li>
-              <a href="#menu">메뉴</a>
-            </li>
-            <li>
-              <a href="#members">이디야멤버스</a>
-            </li>
-            <li>
-              <a href="#coffee-lab">이디야커피랩</a>
-            </li>
-            <li>
-              <a href="#culture-lab">이디야컬쳐랩</a>
-            </li>
-            <li>
-              <a href="#notice">공지사항</a>
-            </li>
-            <li>
-              <a href="#find-store">매장찾기</a>
-            </li>
+            {items.map(({ link, text }, index) => (
+              <li key={`${link}-${index}`}>
+                <a href={link}>{text}</a>
+              </li>
+            ))}
           </ul>
-          <button
-            className="resetButton is-close-menu"
-            type="button"
-            title="메뉴 닫기"
-            aria-label="메뉴 닫기"
+          <AppButton
+            className="is-close-menu"
+            label="메뉴 닫기"
             onClick={this.handleCloseMenu}
           >
             <span className="close" aria-hidden="true">
-              ×
+              x
             </span>
-          </button>
+          </AppButton>
         </nav>
       </Fragment>
     );

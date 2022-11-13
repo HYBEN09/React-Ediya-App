@@ -50,3 +50,13 @@ React를 배우려면 공식 [React documentation](https://reactjs.org/)을 확�
 - [고급 환경 구성](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 - [배포](https://facebook.github.io/create-react-app/docs/deployment)
 - [`npm run build` 명령이 실패 할 경우](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# 학습 목표
+## 미니 프로젝트를 실습하는 목표는 다음과 같습니다.
+
+### 순수 웹 사이트(HTML, CSS, JavaScript, DOM API) → React 앱 사이트
+### React 선언형 프로그래핑
+### React 컴포넌트/모듈 시스템
+### React 앱 스타일 관리
+### React 앱 접근성 개선
+### 프로젝트 빌드 & 배포
